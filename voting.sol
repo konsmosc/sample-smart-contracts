@@ -8,9 +8,8 @@ contract Voting {
     mapping (bytes32 => uint) private votesReceived;
     bytes32[] public candidateList;
 
-    constructor(bytes32[] memory candidateNames, string memory title) {
+    constructor(bytes32[] memory candidateNames) {
         candidateList = candidateNames;
-        votetitle = title;
         owner = msg.sender;
     }
 
